@@ -10,7 +10,7 @@ K = float(raw_input("Input K"))
 L = float(raw_input("Input L"))
 x = str(raw_input("filename"))
 Pt = [P0, P1]
-for t in range(1, 250):
+for t in range(1, 125):
    D0s = []
    S0s = []
    S1s = []
@@ -46,49 +46,9 @@ for t in range(1, 250):
    D0 = A - (B*Pt[t-1]) + random.uniform(Ustart, Uend)
    S0 = K + (L*Pt[t]) + random.uniform(Vstart, Vend)
    S1 = D0 + random.uniform(Wstart, Wend)
-   
 
-   '''print "D0 " + str(D0)
-   print "S0 " + str(S0)
-   print "Ustart " + str(Ustart)
-   print "Uend " + str(Uend)
-   print "Vstart " + str(Vstart)
-   print "Vend " + str(Vend)
-   print "Ustart " + str(Ustart)
-   print "Wend " + str(Wend)'''
-   Us = []
-   Vs = []
-   Ws = []
-
-   '''while a<25:
-      Us.append(random.uniform(Ustart, Uend))
-      Vs.append(random.uniform(Vstart, Vend))
-      Ws.append(random.uniform(Wstart, Wend))
-      a = a + 1
-
-   a = 0'''
-      
-   '''while a<25:'''
-   
-   print "iter " + str(t+1)
-   print "P= " + str(P)
-   print "D0= " + str(A - (B*P0) + random.uniform(Ustart, Uend))
-   print "P= " + str(P)
-
-   '''while a<len(Pt):
-      print "Pt = " + str(a+1) + " " + str(Pt[a])
-      a = a + 1'''
 
 plt.plot(Pt)
 plt.savefig('example'+x+'.png')
 plt.show()
 
-'''for xa in Us:
-   for xb in Vs:
-      for xc in Ws:
-         P = (A-K-L*P1+xa+xb-xc)/B
-         Pt.append(P)
-
-plt.plot(Pt)
-plt.savefig('example_many.png')
-plt.show()'''
